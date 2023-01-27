@@ -9,11 +9,13 @@ Link 컴포넌트를 이용하면 컴포넌트 갱신(SPA)
 const Header = () => {
   return (
     <header>
+      {/* 레이아웃 div */}
+      <div className="inner">
       <h1>
         <Link to="/" >
         Logo</Link>
       </h1>
-      <ul>
+      <ul id="gnb">
         <li>
           <Link to="/department"> Department</Link>
         </li>
@@ -33,6 +35,7 @@ const Header = () => {
           <Link to="/join">Join</Link>
         </li>
       </ul>
+      </div>
     </header>
   );
 };
