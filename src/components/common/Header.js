@@ -1,39 +1,51 @@
 import { Link, NavLink } from "react-router-dom";
-/*
-NavLink 
-: 객체를 이용해서 포커스 스타일 적용
-: activeStyle="CSS 객체" 이라는 props 에 적용
-: to="URI" props 는 필수
-*/
+// FontAwsome 적용
+// https://fontawesome.com/v5/docs/web/use-with/react
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 
-const Header = () => {
+const Header = (props) => {
   const active = { color: "hotpink" };
   return (
-    <header>
+    <header className={props.type}>
       <div className="inner">
         <h1>
           <Link to="/">Logo</Link>
         </h1>
         <ul id="gnb">
           <li>
-            <NavLink activeStyle={active} to="/department"> Department</NavLink>
+            <NavLink activeStyle={active} to="/department">
+              {" "}
+              Department
+            </NavLink>
           </li>
           <li>
-            <NavLink  activeStyle={active} to="/community">Community</NavLink>
+            <NavLink activeStyle={active} to="/community">
+              Community
+            </NavLink>
           </li>
           <li>
-            <NavLink  activeStyle={active} to="/gallery">Gallery</NavLink>
+            <NavLink activeStyle={active} to="/gallery">
+              Gallery
+            </NavLink>
           </li>
           <li>
-            <NavLink  activeStyle={active} to="/youtube">Youtube</NavLink>
+            <NavLink activeStyle={active} to="/youtube">
+              Youtube
+            </NavLink>
           </li>
           <li>
-            <NavLink  activeStyle={active} to="/location">Location</NavLink>
+            <NavLink activeStyle={active} to="/location">
+              Location
+            </NavLink>
           </li>
           <li>
-            <NavLink  activeStyle={active} to="/join">Join</NavLink>
+            <NavLink activeStyle={active} to="/join">
+              Join
+            </NavLink>
           </li>
         </ul>
+        <FontAwesomeIcon icon={faBars} className="fa-bars" />
       </div>
     </header>
   );
