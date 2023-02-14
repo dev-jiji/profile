@@ -26,7 +26,7 @@ const CommunityCard = ({
         formState: { errors },
     } = useForm({
         resolver: yupResolver(schema),
-        mode: "onChange", // mode 가 onChange 면 실행하라
+        mode: "onChange", // mode 가 onChang e 면 실행하라
     });
     return (
         <>
