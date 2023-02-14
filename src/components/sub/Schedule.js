@@ -84,7 +84,7 @@ const Schedule = () => {
                         // 조건에 맞으므로 html을 생성해 준다.
                         html.push(
                             <img
-                                key={`tododata_${moment(date)}`}
+                                key={`todoData_${moment(date)}`}
                                 src={`${publicFolder}/images/starbucks.png`}
                                 alt="아이콘"
                                 style={{ width: 20, height: 20 }}
