@@ -93,7 +93,7 @@ const CommunityCard = ({
                     <>
                         <div className="txt">
                             <h2>
-                                {item.title}
+                                {item.title}{" "}
                                 <span className="day">{item.timestamp}</span>
                             </h2>
                             <p>{item.content}</p>
