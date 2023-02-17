@@ -33,10 +33,17 @@ const Logout = () => {
             },
         });
     };
+    // 네이버 로그아웃
+    const naverLogout = () => {
+        localStorage.removeItem("com.naver.nid.access_token");
+        localStorage.removeItem("com.naver.nid.oauth.state_token");
+        history.push("/");
+    };
     return (
         <div>
-            <button onClick={kakaoLogOut}>카카오로그아웃</button>
-            <button onClick={memberOut}>카카오회원탈퇴</button>
+            <button onClick={kakaoLogOut}>카카오 로그아웃</button>
+            <button onClick={memberOut}>카카오 서비스 탈퇴</button>
+            <button onClick={naverLogout}>네이버 로그아웃</button>
         </div>
     );
 };
